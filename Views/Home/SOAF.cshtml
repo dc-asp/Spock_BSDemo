@@ -1,0 +1,344 @@
+﻿
+@{
+    ViewBag.Title = "SOAF";
+}
+
+<style>
+
+    .soaf {
+        width: 100%;
+        border: 1px solid black;
+        font-weight:400;
+        color: black;
+        //background-color: blanchedalmond;
+    }
+
+    .kvalue {
+        width: 100%;
+        border: 1px solid black;
+        font-weight: 400;
+        //color: ;
+        //background-color: blanchedalmond;
+    }
+
+    .target {
+        color: red;
+        font-size: larger;
+        font-weight: bolder
+    }
+
+    .standardSOAF {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .startFX {
+        width: 100%;
+        margin-top: 10px;
+             
+    }
+
+    .clearFX {
+        width: 100%;
+        margin-top: 10px;
+             
+    }
+</style>
+
+
+<h2>Some of all fears Coding Challenge</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <h5>
+            The Sum Of All Fears coding challenge involves an array of integers and some number called 'K'. If 'K' can be derived from adding any two numbers from the array then it is said to contain that 'K' value. If given an array = [10, 4, 6, 7] and a 'K' value of 17, the array contains the 'K' value because 10 + 7 = 'K'
+        </h5>
+
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <b>Create a searchable array by entering 6 numbers into the boxes below</b>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input1" /></div>
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input2" /></div>
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input3" /></div>
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input4" /></div>
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input5" /></div>
+    <div class="col-sm-1 "><input class="soaf" type="number" id="input6" /></div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <b>Establish a 'K' value by entering a number in the box below</b>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"><input class="kvalue" type="number" id="kValue" /></div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-warning btn-lg standardSOAF" id="btnK">START</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-warning btn-lg clearFX" id="btnClear">CLEAR</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <button id="btnToggle" class="btn btn-warning btn-lg startFX">SHOW CODE</button>
+    </div>
+</div>
+
+
+
+    <!--
+    <div class="col-md-6 text-center">
+    <button class="btn btn-sm btn-warning standardW">Center Test</button>
+    </div>
+    -->
+
+
+
+
+
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <p id="out"></p>
+    </div>
+</div>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="code">
+            <pre class="brush: js">
+                        $("#btnK").click(function () {
+                        //declare an empty array
+                        var myArray = new Array();
+
+                        //Get all the numbers
+                        myArray.push(+$("#num1").val());
+                        myArray.push(+$("#num2").val());
+                        myArray.push(+$("#num3").val());
+                        myArray.push(+$("#num4").val());
+                        myArray.push(+$("#num5").val());
+                        myArray.push(+$("#num6").val());
+
+                        var kValue = +$("#kValue").val();
+
+                        for (index = 0; index < myArray.length - 1; index++) {
+                            var position = myArray.indexOf(kValue - myArray[index], index + 1);
+                            if (position > 0) {
+                                $("#out").html("<b>" + kValue + "</b> was found by adding array members " + "<span class='target'>" + myArray[index] + " </span> and <span class='target'>" + myArray[position] + "</span>");
+                                return;
+                            }
+               
+                            $("#out").text("K was not found!");
+                </pre>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+            <div class="row">
+            <div class="col-md-4">Enter Number 1</div>
+            <input type="number" id="input1" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">Enter Number 2</div>
+            <input type="number" id="input2" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">Enter Number 3</div>
+            <input type="number" id="input3" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">Enter Number 4</div>
+            <input type="number" id="input4" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">Enter Number 5</div>
+            <input type="number" id="input5" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Enter Number 5</div>
+            <input type="number" id="input6" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Value K</div>
+            <input type="number" id="kValue" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+-->
+<!--
+        <div class="container">
+            <button type="button" class="btn btn-warning btn-lg" id="mathBtn">SOLVE</button>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+
+        <h1></h1>
+
+        <h3>Answer...</h3>
+
+        <div class="row">
+            <div class="col-lg-8">Answer</div>
+            <p id="smallest"></p>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                </div>
+             </div>
+            </div>
+        </div>
+    </div>
+
+-->
+
+@*@section scripts{
+
+    <script>
+
+        $("#code").hide();
+
+        $("#btnToggle").click(function () {
+            $("#code").toggle();
+
+            if ($(this).text() == "Show Code") {
+                $(this).text("Hide Code");
+            }
+            else {
+                $(this).text("Show Code");
+            }
+        });
+
+        $("#btnK").click(function () {
+            //declare an empty array
+            var myArray = new Array();
+
+            //Get all the numbers
+            myArray.push(+$("#input1").val());
+            myArray.push(+$("#input2").val());
+            myArray.push(+$("#input3").val());
+            myArray.push(+$("#input4").val());
+            myArray.push(+$("#input5").val());
+            myArray.push(+$("#input6").val());
+
+            var kValue = +$("#kValue").val();
+
+            for (index = 0, found = false; index < myArray.length - 1; index++) {
+                var position = myArray.indexOf(kValue - myArray[index], index + 1);
+                if (position > 0) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                $("#out").html("<b>" + kValue + "</b> was found by adding array members " + "<span class='target'>" + myArray[index] +
+                    " </span> and <span class='target'>" + myArray[position] + "</span>");
+            }
+            else {
+                $("#out").text("K was not found!");
+            }
+
+        });
+
+        $("#btnClear").click(function () {
+                        //Clear the input
+                     $("#input1, #input2, #input3, #input4, #input5, #input6, #kValue").val('');
+                     $("#out").html('');
+
+
+        });
+
+
+
+    </script>*@
+
+
+
+}
+
+<!--
+
+function FindSumA(numbers, answer) {
+
+    //Loop through the array and add the adjacent number and check for the answer
+
+    let checkValue = 0;
+    let found = false;
+
+    //[15,3,10,7] startIndex = 0, end Index = 3
+
+
+    for (let i = 0; i <= numbers.length - 2; i++) {
+
+        //Loop over the array in the after the current value
+
+        for (let y = (i + 1); y <= numbers.length - 1; y++) {
+            if (answer == numbers[i] + numbers[y]) {
+                found = true;
+                return found;
+            }
+        }
+    }
+    return found;
+}
+
+-->

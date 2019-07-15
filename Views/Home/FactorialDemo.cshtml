@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "FactorialDemo";
+}
+
+<h2>FactorialDemo</h2>
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <h3>Enter a number in the empty field below...</h3>
+        <div class="row">
+            <div class="col-md-4">Enter a number under 170 </div>
+            <input type="number" id="fact" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning btn-lg" id="btnFact">SOLVE</button>
+        </div>
+    </div>
+
+       
+
+    <div class="col-sm-6">
+
+        <h1></h1>
+
+        <h3>Results...</h3>
+
+        <div class="row">
+            <div class="col-lg-8">Factorial Answer:</div>
+            <p id="factOut"></p>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning btn-lg" id="btnClear">CLEAR</button>
+        </div>
+    </div>
+</div>
+
+        
+    
+
+    @*@section scripts{
+
+        <script>
+
+            //I need a click event handler for the button
+            $("#btnFact").click(function () {
+
+                //Step 1: Get the user data
+                var number = +$("#fact").val();
+
+                if (number > 170) {
+                    alert("Please enter positive numbers less than 171");
+                    $("#fact").val('');
+                    return;
+                }
+
+                else {
+                    //Step 2: Calculate the Factorial
+                    for (var loop = number - 1; loop > 1; loop--) {
+                        //How do we calculate the factorial
+                        //number = number * loop
+                        number *= loop;
+                    }
+
+                    //Step 3: Show the result
+                    $("#factOut").text(number);
+                }
+
+
+            });
+
+            $("#btnClear").click(function () {
+                //Clear the input
+                $("#fact").val('');
+                $("#factOut").text('');
+
+
+            });
+        </script>
+
+
+
+
+
+    }*@

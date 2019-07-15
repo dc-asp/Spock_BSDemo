@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzz";
+}
+
+<style>
+    .common{
+        font-weight: 900;
+    }
+    .fizz{
+        color: chartreuse;
+        
+    }
+
+    .buzz{
+        color: brown;
+        
+    }
+
+    .fizzbuzz{
+        color: aqua;
+        
+    }
+</style>
+<h2>FizzBuzz</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <h3>Enter a number in the empty field below...</h3>
+        <div class="row">
+            <div class="col-md-4">Enter 1st Integer </div>
+            <input type="number" id="fbIn1" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Enter 2nd Integer</div>
+            <input type="number" id="fbIn2" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning btn-lg" id="btnFb">SOLVE</button>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-6">
+
+        <h1></h1>
+
+        <h3>Results...</h3>
+
+        <div class="row">
+            <div class="col-lg-8">Answer:</div>
+            <p id="fbOut"></p>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning btn-lg" id="btnClear">CLEAR</button>
+        </div>
+    </div>
+</div>
+
+
+
+@*@section scripts{
+    
+    <script>
+        $("#btnFb").click(function () {
+            var num1 = +$("#fbIn1").val();
+            var num2 = +$("#fbIn2").val();
+
+            var fizzbuzzEntry = "<span class='fizzbuzz common'>Fizz-Buzz</span>";
+            var fizzEntry = "<span class='fizz common'>Fizz</span>";
+            var buzzEntry = "<span class='buzz common'>Buzz</span>";
+
+            for (var counter = 1, output = []; counter <= 100; counter++){
+                if (counter % num1 == 0 && counter % num2 == 0) {
+                    output.push(fizzbuzzEntry);
+                }
+                else if (counter % num1 == 0) {
+                    output.push(fizzEntry);
+                }
+                else if (counter % num2 == 0) {
+                    output.push(buzzEntry);
+                }
+                else {
+                    output.push(counter);
+                }
+
+            
+            }
+
+            $("#fbOut").html(output.join(', '));
+           
+
+        });
+
+        $("#btnClear").click(function () {
+                //Clear the input
+             $("#fbIn").val('');
+             $("#fbOut").html('');
+
+
+        });
+
+
+
+    </script>*@
+    
+    
+    
+}

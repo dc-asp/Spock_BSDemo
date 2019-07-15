@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "PalindromeDemo";
+}
+
+<style>
+.standardW {
+    width: 135px;
+    margin-top: 10px;
+
+}
+
+
+</style>
+
+<h2>PALINDROME EXCERCISE</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <h3>Enter a word in the empty field below...</h3>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <input type="text" id="palIn" />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning standardW btn-lg" id="btnPal">CHECK</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-sm-6">
+
+        <h1></h1>
+
+        <h3>Is it a Palindrome?</h3>
+
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <p id="palOut"></p>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-warning standardW btn-lg" id="btnClear">CLEAR</button>
+        </div>
+    </div>
+</div>
+
+
+
+@*@section scripts{
+
+    <script>
+
+
+        $("#btnPal").click(function () {
+            var word = $("#palIn").val();
+            var revword = word.split('').reverse().join('');
+            //var revword = (word).reverse();
+
+
+            ////for (var index = word.length - 1, newword = ''; index >= 0; index--) {
+            ////revword += word.substr(index, 1);
+
+
+            var message = '';
+            if (word === revword) {
+                message = word + " reversed = True" + " therefore " + word + " is a Palindrome";
+            }
+
+            else {
+                message = word + " reversed = False"  + " therefore " + word + " is not a Palindrome";
+            }
+
+            $("#palOut").text(message);
+
+            ////}
+        });
+
+        $("#btnClear").click(function () {
+                //Clear the input
+                $("#palIn").val('');
+                $("#palOut").text('');
+
+
+        });
+
+    </script>
+
+}*@
+
+    <!--
+
+     $("#code").hide();
+
+     $("#btnToggle").click(function)(){
+     $("#code").toggle();
+
+     if ($(this).text() == "Show Code"){
+         $} ($(this).text("Hide Code");
+     }
+     else{
+         $(this).text("Show Code");
+     }
+     });
+
+     $("#btnk").click(function)()...);
+
+
+
+     -->
+    <!--    //function palindrome(myString){
+
+    /* remove special characters, spaces and make lowercase*/
+    /*var removeChar = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+    /* reverse removeChar for comparison*/
+    //var checkPalindrome = removeChar.split('').reverse().join('');
+
+    /* Check to see if myString is a Palindrome*/
+    //if(removeChar === checkPalindrome){
+
+      //document.write("<div>
+    "+ myString + " is a Palindrome <div>
+        ");
+        //}else{
+
+        //document.write("<div>" + myString + " is not a Palindrome </div>");
+        //}
+        //}
+        //palindrome('"Oh who was it I saw, oh who?"')
+        //palindrome('"Madam"')
+        //palindrome('"Star Wars"')
+        //palindrome('"2,3,4,3,2"')
+        //palindrome('"7,10,7,8,9"')
+
+
+
+        //Step 1: get the word
+        //var word = $("palIn").val();
+
+        //Step 2: Reverse the word
+        //Use decrementing for loop in conjunction with the
+        //substr command and the += operator to produce the reverse word.
+        //for () {
+
+        //}
+
+
+        //Step3:Inform the user
+        //$("#palOut").text("");
+
+           -->
