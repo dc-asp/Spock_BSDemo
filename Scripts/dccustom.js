@@ -181,7 +181,7 @@
             $("#out").text("K was not found!");
         }
 
-    });
+    });z
 
     $("#btnClear5").click(function () {
         //Clear the input

@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model Spock_BSDemo.Models.EmailModel
+@{ 
     Layout = null;
 }
 
@@ -13,6 +14,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- css -->
     <link href="~/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="~/Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="~/Content/SyntaxHighlighter/shCoreDefault.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" media="screen">
     <link href="~/color/default.css" rel="stylesheet" media="screen">
     <script src="~/js/modernizr.custom.js"></script>
@@ -79,7 +82,7 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <div class="section-heading">
-                        <h2>About us</h2>
+                        <h2>About Me</h2>
                         <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
                     </div>
                 </div>
@@ -88,11 +91,11 @@
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class="box-team wow bounceInDown" data-wow-delay="0.1s">
                         <img src="~/img/team/1.jpg" alt="" class="img-responsive" />
-                        <h4>Kurt coleman</h4>
-                        <p>Art Director</p>
+                        <h4>Dimitri Carter</h4>
+                        <p>Full Stack Developer</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
+                @*<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
                     <div class="box-team wow bounceInDown">
                         <img src="~/img/team/2.jpg" alt="" class="img-responsive" />
                         <h4>Isobel lyna</h4>
@@ -112,7 +115,7 @@
                         <h4>Letitia pena</h4>
                         <p>Typographer</p>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </section>
@@ -212,9 +215,9 @@
                         </div>
 
                         @*<div class="container">
-                        <h2>Click button to access Javascript excercises</h2>
-                         Trigger the modal with a button
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
+                            <h2>Click button to access Javascript excercises</h2>
+                             Trigger the modal with a button
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
@@ -385,9 +388,9 @@
                         </div>
 
                         @*<div class="container">
-                        <h2>Click button to access Javascript excercises</h2>
-                            Trigger the modal with a button
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
+                            <h2>Click button to access Javascript excercises</h2>
+                                Trigger the modal with a button
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal2" role="dialog">
@@ -482,9 +485,9 @@
                         </div>
 
                         @*<div class="container">
-                        <h2>Click button to access Javascript excercises</h2>
-                            Trigger the modal with a button
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
+                            <h2>Click button to access Javascript excercises</h2>
+                                Trigger the modal with a button
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal3" role="dialog">
@@ -585,9 +588,9 @@
                         </div>
 
                         @*<div class="container">
-                        <h2>Click button to access Javascript excercises</h2>
-                            Trigger the modal with a button
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
+                            <h2>Click button to access Javascript excercises</h2>
+                                Trigger the modal with a button
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal4" role="dialog">
@@ -708,9 +711,9 @@
                         </div>
 
                         @*<div class="container">
-                    <h2>Click button to access Javascript excercises</h2>
-                     Trigger the modal with a button
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
+                            <h2>Click button to access Javascript excercises</h2>
+                             Trigger the modal with a button
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ENTER</button>*@
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal5" role="dialog">
@@ -774,7 +777,7 @@
                                                     <div class="col-sm-6">
 
                                                         <h5>
-                                                            The Sum Of All Fears coding challenge involves an array of integers and some number called 'K'. If 'K' can be derived from adding any two numbers from the array then it is said to contain that 'K' value. If given an array = [10, 4, 6, 7] and a 'K' value of 17, the array contains the 'K' value because 10 + 7 = 'K'
+                                                            The Sum Of All Fears coding challenge involves an array of integers and some number called 'K'. If 'K' can be derived from adding any two numbers from the array then it is said to contain that 'K' value. If given an array = [10, 4, 6, 7, 4, & 8] and a 'K' value of 17, the array contains the 'K' value because 10 + 7 = 'K'
                                                         </h5>
 
                                                     </div>
@@ -806,9 +809,11 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <button type="button" class="btn btn-warning btn-lg standardSOAF" id="btnK">START</button>
+                                                        <button type="button" class="btn btn-warning btn-lg clearFX" id="btnClear5">CLEAR</button>
+                                                        <button id="btnToggle" class="btn btn-warning btn-lg startFX">SHOW CODE</button>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                @*<div class="row">
                                                     <div class="col-md-3">
                                                         <button type="button" class="btn btn-warning btn-lg clearFX" id="btnClear5">CLEAR</button>
                                                     </div>
@@ -817,7 +822,7 @@
                                                     <div class="col-md-3">
                                                         <button id="btnToggle" class="btn btn-warning btn-lg startFX">SHOW CODE</button>
                                                     </div>
-                                                </div>
+                                                </div>*@
 
 
 
@@ -875,19 +880,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal" id="clsBtn">Close</button>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal" id="clsBtn">Close</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
                     </li>
                 </ul>
             </div>
 
         </div>
 
-            @*<ul>
+        @*<ul>
                     <li>
                         <a href="~/#image-2">
                             <img src="img/works/thumbs/2.jpg" alt="">
@@ -1021,8 +1026,8 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <div class="section-heading">
-                        <h2>Contact us</h2>
-                        <p>Contact via form below and we will be get in touch with you within 24 hours. </p>
+                        <h2>Contact Me</h2>
+                        <p>Contact me via the form below and I will respond within 24 hours. </p>
                     </div>
                 </div>
             </div>
@@ -1031,33 +1036,37 @@
                 <div class="col-md-offset-2 col-md-8">
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div id="errormessage"></div>
-                    <form action="" method="post" role="form" class="contactForm">
+                    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                    {
+
+                        @Html.AntiForgeryToken()
+                    @*<form action="" method="post" role="form" class="contactForm">*@
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="FromName" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control" name="FromEmail" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <input type="text" class="form-control" name="Subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="Body" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                             <div class="validation"></div>
                         </div>
 
                         <div class="text-center"><button type="submit" class="btn btn-theme btn-lg btn-block">Send Message</button></div>
-                    </form>
-
+                    @*</form>*@
+                    }
 
                 </div>
             </div>
             <div class="row mar-top30 ">
                 <div class="col-md-offset-2 col-md-8">
-                    <h5>We're on social networks</h5>
+                    <h5>I'm on social Media</h5>
                     <ul class="social-network">
                         <li>
                             <a href="~/#">
@@ -1067,14 +1076,14 @@
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a href="~/#">
-                                <span class="fa-stack fa-2x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
+                        @*<li>
+                                <a href="~/#">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>*@
                         <li>
                             <a href="~/#">
                                 <span class="fa-stack fa-2x">
@@ -1083,14 +1092,14 @@
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a href="~/#">
-                                <span class="fa-stack fa-2x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
+                        @*<li>
+                                <a href="~/#">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>*@
                     </ul>
                 </div>
             </div>
@@ -1126,7 +1135,17 @@
     <script src="~/js/wow.min.js"></script>
     <script src="~/js/custom.js"></script>
     <script src="~/Scripts/dccustom.js"></script>
-    
+    <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+
+
+
+    <!--Finally, to actually run the highlighter, you need to include this JS on your page-->
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+
+
 
 </body>
 
